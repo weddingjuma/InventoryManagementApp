@@ -22,17 +22,26 @@ public class InventoryManagementApp {
         
         
         Pogacsa pogi = new Pogacsa("Pogi",12 , 4, 20);
+        Pogacsa pizzasPogi = new Pogacsa(15, " PizzasPogi", 15, 2, 21);
         
         
-        System.out.println(inventory);
-        
-        inventory.kiad(pogi);
-        
-        
-        System.out.println(inventory);
+        Product [] outProducts = new Product[2];
+        outProducts[0] = pogi;
+        outProducts[1] = pizzasPogi;
         
         
-        inventory.ellenoriz();
+        inventory.allProducedProductsData(outProducts);
+        
+        
+//        System.out.println(inventory);
+//        
+//        inventory.kiad(pogi);
+//        
+//        
+//        System.out.println(inventory);
+//        
+//        
+//        inventory.ellenoriz();
             
     }
     

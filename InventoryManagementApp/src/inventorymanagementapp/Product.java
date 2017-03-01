@@ -10,6 +10,14 @@ package inventorymanagementapp;
  * @author joci
  */
 public abstract class Product extends Inventory {
+    
+    
+    
+    
+  
+    
+    
+    
 
     protected String name;
     protected int dbTojas;

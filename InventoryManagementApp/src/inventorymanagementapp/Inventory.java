@@ -22,6 +22,18 @@ public  class Inventory {
     
     
     
+      public void allProducedProductsData (Product [] products)  {
+        
+        for (int i = 0; i < products.length; i++) {
+            System.out.println( products[i].name+ "\t");
+        }
+        
+    }
+    
+    
+    
+    
+    
     public void kiad(Product product){
         
         csoki -= product.dbCSoki;
@@ -36,7 +48,7 @@ public  class Inventory {
         
         
         if (tojas<500) {
-            System.err.println("A tojasbol levesebb van mit 500 db ");
+            System.err.println("A tojasbol kevesebb van mit 500 db ");
         }
     }
     
