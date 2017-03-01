@@ -11,12 +11,12 @@ package inventorymanagementapp;
  */
 public  class Inventory {
 
-    public static int liszt = 10000;
-    public static int lekvar = 25000;
-    public static int tej = 5000;
-    public static int tojas = 1500;
-    public static int vaj = 7000;
-    public static int csoki = 255000;
+    public static int liszt = 150;
+    public static int lekvar = 200;
+    public static int tej = 150;
+    public static int tojas = 500;
+    public static int vaj = 650;
+    public static int csoki = 120;
     
     
     
@@ -26,16 +26,26 @@ public  class Inventory {
         
         csoki -= product.dbCSoki;
         tej-=product.lTej;
-        tojas -= product.dbTojas;
-        
-        
+        tojas -= product.dbTojas;    
     }
+    
+    
+    
+    public void ellenoriz (){
+        
+        
+        
+        if (tojas<500) {
+            System.err.println("A tojasbol levesebb van mit 500 db ");
+        }
+    }
+    
 
     @Override
     public String toString() {
         return "Inventory{ status: List : " +liszt + ""
                 + " Levar "+ lekvar +
-                " tej : " + tej+
+                " tej : " + tej                     +
                 " tojas : " + tojas +
                 " vaj : " + vaj +
                 " csoki :" + csoki ;

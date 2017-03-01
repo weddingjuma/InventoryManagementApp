@@ -30,6 +30,9 @@ public class InventoryManagementApp {
         
         
         System.out.println(inventory);
+        
+        
+        inventory.ellenoriz();
             
     }
     
