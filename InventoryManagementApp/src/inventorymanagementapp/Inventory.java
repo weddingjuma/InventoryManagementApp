@@ -28,36 +28,41 @@ public class Inventory {
 
     }
 
-    public void kiad(Pogacsa product ) {
+    public void kiad(Pogacsa product) {
 
-        csoki -= product.dbCSoki;
+        if (csoki > 50) {
+            csoki -= product.dbCSoki;
 
-        tej -= product.lTej;
-        tojas -= product.dbTojas;
-        vaj -= product.vaj;
-        liszt -= product.lisztPorduct;
-        lekvar -= product.lekvarpro;
-        pizzakremARaktarban-= product.pizzaskrem;
-    }
-    
-      public void kiad(Torta product ) {
-
-        csoki -= product.dbCSoki;
+        }else {
+            System.out.println("nincs  tobb csoki ");
+        }
 
         tej -= product.lTej;
         tojas -= product.dbTojas;
         vaj -= product.vaj;
         liszt -= product.lisztPorduct;
         lekvar -= product.lekvarpro;
-        tejszinhabraktaron-= product.tejszinhab;
+        pizzakremARaktarban -= product.pizzaskrem;
+
     }
-    
-    
-    
-    
-    
-    
-    
+
+    public void kiad(Torta product) {
+
+//        if (csoki < 20) {
+//            System.out.println(" product can not take on the delivery list ");
+//        } else if (csoki > 20) {
+//
+//            csoki -= product.dbCSoki;
+//
+//        }
+//
+//        tej -= product.lTej;
+//        tojas -= product.dbTojas;
+//        vaj -= product.vaj;
+//        liszt -= product.lisztPorduct;
+//        lekvar -= product.lekvarpro;
+//        tejszinhabraktaron -= product.tejszinhab;
+    }
 
     public void ellenoriz() {
         if (tojas < 500) {

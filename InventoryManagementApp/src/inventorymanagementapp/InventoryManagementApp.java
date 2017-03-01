@@ -15,32 +15,29 @@ public class InventoryManagementApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        
+
         Inventory inventory = new Inventory();
-     
-        
-        
-        Pogacsa pogi = new Pogacsa("Pogi",12 , 4, 20);
+
+        Pogacsa pogi = new Pogacsa("Pogi", 12, 4, 10);
         Pogacsa pizzasPogi = new Pogacsa(15, " PizzasPogi", 15, 2, 21);
         Torta torta = new Torta(15, "Dobos Torta", 21, 5, 15);
-        
-        
-        Product [] outProducts = new Product[2];
+
+        Product[] outProducts = new Product[2];
         outProducts[0] = pogi;
         outProducts[1] = pizzasPogi;
+
+      
         
+  
+       
         
-       // inventory.allProducedProductsData(outProducts);
-        
-        
+     
         System.out.println(inventory);
-        
         inventory.kiad(pogi);
-        
-         System.out.println(inventory);
-        
-        
+        System.out.println(inventory);
+        inventory.kiad(pogi);
+        System.out.println(inventory);
+
         inventory.kiad(torta);
         
         
@@ -49,9 +46,7 @@ public class InventoryManagementApp {
         
         inventory.ellenoriz();
         
-        inventory.kiad(pogi);
-        inventory.kiad(pogi);
-            
+     
     }
-    
+
 }
