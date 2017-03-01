@@ -30,18 +30,21 @@ public class InventoryManagementApp {
         outProducts[1] = pizzasPogi;
         
         
-        inventory.allProducedProductsData(outProducts);
+       // inventory.allProducedProductsData(outProducts);
         
         
-//        System.out.println(inventory);
-//        
-//        inventory.kiad(pogi);
-//        
-//        
-//        System.out.println(inventory);
-//        
-//        
-//        inventory.ellenoriz();
+        System.out.println(inventory);
+        
+        inventory.kiad(pogi);
+        
+        
+        System.out.println(inventory);
+        
+        
+        inventory.ellenoriz();
+        
+        inventory.kiad(pogi);
+        inventory.kiad(pogi);
             
     }
     

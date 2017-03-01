@@ -12,6 +12,10 @@ package inventorymanagementapp;
 public class Pogacsa extends Product {
 
     protected int pizzaskrem;
+    
+    
+    
+    
 
     public Pogacsa(int pizzaskrem, String name, int dbTojas, int lTej, int dbCSoki) {
         super(name, dbTojas, lTej, dbCSoki);

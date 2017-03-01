@@ -25,7 +25,7 @@ public  class Inventory {
       public void allProducedProductsData (Product [] products)  {
         
         for (int i = 0; i < products.length; i++) {
-            System.out.println( products[i].name+ "\t");
+            System.out.println( products[i].name+ "\t"+ products[i].kolbasz);
         }
         
     }
@@ -36,17 +36,28 @@ public  class Inventory {
     
     public void kiad(Product product){
         
-        csoki -= product.dbCSoki;
+        if (csoki>110) {
+            
+            csoki -= product.dbCSoki;
+        }else{
+            System.err.println("nem adhatok ki tobb csokis termeket nincs elg csoki a raktarban ");
+        }
+        
+        
         tej-=product.lTej;
-        tojas -= product.dbTojas;    
+        tojas -= product.dbTojas; 
+        vaj-= product.vaj;
+        liszt-=product.lisztPorduct;
+        lekvar-=product.lekvarpro;
+        
+        
+        
+        
     }
     
     
     
     public void ellenoriz (){
-        
-        
-        
         if (tojas<500) {
             System.err.println("A tojasbol kevesebb van mit 500 db ");
         }
@@ -57,9 +68,9 @@ public  class Inventory {
     public String toString() {
         return "Inventory{ status: List : " +liszt + ""
                 + " Levar "+ lekvar +
-                " tej : " + tej                     +
+                " tej : " + tej     +
                 " tojas : " + tojas +
-                " vaj : " + vaj +
+                " vaj : " + vaj     +
                 " csoki :" + csoki ;
     }
   
