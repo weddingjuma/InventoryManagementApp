@@ -10,7 +10,6 @@ package inventorymanagementapp;
  * @author joci
  */
 public abstract class Product extends Inventory {
-   
 
     protected String name;
     protected int dbTojas;
@@ -22,8 +21,6 @@ public abstract class Product extends Inventory {
     protected int lisztPorduct;
     protected int lekvarpro;
 
-  
-    
     
     
 
@@ -34,7 +31,6 @@ public abstract class Product extends Inventory {
         this.dbCSoki = dbCSoki;
     }
 
-
     public Product(String name, int dbTojas, int lTej, int dbCSoki, int sajt, int vajkg) {
         this.name = name;
         this.dbTojas = dbTojas;
@@ -43,8 +39,7 @@ public abstract class Product extends Inventory {
         this.sajt = sajt;
         this.vajkg = vajkg;
     }
-    
-   
+
     public Product(String name, int dbTojas, int lTej, int dbCSoki, int vajkg) {
         this.name = name;
         this.dbTojas = dbTojas;
@@ -52,12 +47,7 @@ public abstract class Product extends Inventory {
         this.dbCSoki = dbCSoki;
         this.vajkg = vajkg;
     }
-    
-    
-    
- 
 
-   
     public Product() {
     }
 

@@ -23,6 +23,7 @@ public class InventoryManagementApp {
         
         Pogacsa pogi = new Pogacsa("Pogi",12 , 4, 20);
         Pogacsa pizzasPogi = new Pogacsa(15, " PizzasPogi", 15, 2, 21);
+        Torta torta = new Torta(15, "Dobos Torta", 21, 5, 15);
         
         
         Product [] outProducts = new Product[2];
@@ -36,6 +37,11 @@ public class InventoryManagementApp {
         System.out.println(inventory);
         
         inventory.kiad(pogi);
+        
+         System.out.println(inventory);
+        
+        
+        inventory.kiad(torta);
         
         
         System.out.println(inventory);

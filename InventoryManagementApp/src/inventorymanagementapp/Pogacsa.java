@@ -20,6 +20,8 @@ public class Pogacsa extends Product {
     public Pogacsa(int pizzaskrem, String name, int dbTojas, int lTej, int dbCSoki) {
         super(name, dbTojas, lTej, dbCSoki);
         this.pizzaskrem = pizzaskrem;
+        
+        
     }
     
     
@@ -28,6 +30,14 @@ public class Pogacsa extends Product {
     
     public Pogacsa(String name, int dbTojas, int lTej, int sajt) {
         super(name, dbTojas, lTej, sajt);
+    }
+
+    public int getPizzaskrem() {
+        return pizzaskrem;
+    }
+
+    public void setPizzaskrem(int pizzaskrem) {
+        this.pizzaskrem = pizzaskrem;
     }
 
  
