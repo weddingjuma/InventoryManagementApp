@@ -17,10 +17,17 @@ public class Pogacsa extends Product {
     
     
 
+        
+        
+      Pogacsa [] pogacsa = new Pogacsa[2];
+      
     public Pogacsa(int pizzaskrem, String name, int dbTojas, int lTej, int dbCSoki) {
         super(name, dbTojas, lTej, dbCSoki);
         this.pizzaskrem = pizzaskrem;
         
+        
+      
+      
         
     }
     

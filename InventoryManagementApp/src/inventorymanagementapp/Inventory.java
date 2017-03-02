@@ -28,13 +28,63 @@ public class Inventory {
 
     }
 
+    public void refillInventory() {
+
+        liszt = 150;
+        lekvar = 200;
+        tej = 150;
+        tojas = 500;
+        vaj = 650;
+        csoki = 120;
+        tejszinhabraktaron = 150;
+        pizzakremARaktarban = 70;
+
+    }
+
     public void kiad(Pogacsa product) {
 
         if (csoki > 50) {
             csoki -= product.dbCSoki;
 
-        }else {
-            System.out.println("nincs  tobb csoki ");
+        } else {
+            System.err.println("nincs  tobb csoki ");
+        }
+        if (tej > 50) {
+            tej -= product.lTej;
+        } else {
+            System.err.println("Nincs tobb tej ");
+        }
+        if (tojas > 50) {
+            tojas -= product.dbTojas;
+        }
+        if (liszt > 60) {
+            liszt -= product.lisztPorduct;
+        } else {
+            System.err.println("nincs tobb liszt ");
+        }
+        if (lekvar > 60) {
+            lekvar -= product.lekvarpro;
+
+        } else {
+            System.err.println("nincs tobb lekvar");
+        }
+        if (pizzakremARaktarban > 15) {
+
+            pizzakremARaktarban -= product.pizzaskrem;
+        } else {
+            System.err.println("nincs tobb pizzakrem ");
+        }
+
+    }
+
+    public void kiad(Torta product) {
+
+        if (csoki < 20) {
+            System.out.println(" product can not take on the delivery list ");
+        } else if (csoki > 20) {
+
+            csoki -= product.dbCSoki;
+
         }
 
         tej -= product.lTej;
@@ -42,42 +92,18 @@ public class Inventory {
         vaj -= product.vaj;
         liszt -= product.lisztPorduct;
         lekvar -= product.lekvarpro;
-        pizzakremARaktarban -= product.pizzaskrem;
-
-    }
-
-    public void kiad(Torta product) {
-
-//        if (csoki < 20) {
-//            System.out.println(" product can not take on the delivery list ");
-//        } else if (csoki > 20) {
-//
-//            csoki -= product.dbCSoki;
-//
-//        }
-//
-//        tej -= product.lTej;
-//        tojas -= product.dbTojas;
-//        vaj -= product.vaj;
-//        liszt -= product.lisztPorduct;
-//        lekvar -= product.lekvarpro;
-//        tejszinhabraktaron -= product.tejszinhab;
+        tejszinhabraktaron -= product.tejszinhab;
     }
 
     public void ellenoriz() {
-        if (tojas < 500) {
+        if (tojas < 100) {
             System.err.println("A tojasbol kevesebb van mit 500 db ");
         }
     }
 
     @Override
     public String toString() {
-        return "Inventory{ status: List : " + liszt + ""
-                + " Levar " + lekvar
-                + " tej : " + tej
-                + " tojas : " + tojas
-                + " vaj : " + vaj
-                + " csoki :" + csoki;
+        return "  In the inventory the amount of liszt is " + liszt + "  lekvar  :" + lekvar + "  tej  " + tej + " tojas  " + tojas + " vaj " + vaj + " ";
     }
 
 }
