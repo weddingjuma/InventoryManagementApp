@@ -5,36 +5,26 @@
  */
 package inventorymanagementapp;
 
+
+
 /**
  *
  * @author joci
  */
-public class Pogacsa extends Product {
+public class Pogacsa extends Product implements ShelfLife{
 
     protected int pizzaskrem;
     
-    
-    
-    
+        
+        
+        
+        
 
-        
-        
-      Pogacsa [] pogacsa = new Pogacsa[2];
-      
     public Pogacsa(int pizzaskrem, String name, int dbTojas, int lTej, int dbCSoki) {
         super(name, dbTojas, lTej, dbCSoki);
         this.pizzaskrem = pizzaskrem;
-        
-        
-      
-      
-        
     }
-    
-    
-    
-    
-    
+
     public Pogacsa(String name, int dbTojas, int lTej, int sajt) {
         super(name, dbTojas, lTej, sajt);
     }
@@ -47,12 +37,9 @@ public class Pogacsa extends Product {
         this.pizzaskrem = pizzaskrem;
     }
 
- 
-    
-    
-    
-    
-    
-    
-    
+    @Override
+    public void selfLife() {
+        System.out.println(" 5 napos szavatossagi ido ");
+    }
+
 }

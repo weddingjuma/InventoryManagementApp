@@ -5,6 +5,10 @@
  */
 package inventorymanagementapp;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  *
  * @author joci
@@ -21,8 +25,6 @@ public abstract class Product extends Inventory {
     protected int lisztPorduct;
     protected int lekvarpro;
 
-    
-    
 
     public Product(String name, int dbTojas, int lTej, int dbCSoki) {
         this.name = name;

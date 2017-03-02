@@ -25,7 +25,13 @@ public class InventoryManagementApp {
         Pogacsa pogi3 = new Pogacsa("Pogi", 12, 4, 10);
 
         Pogacsa pizzasPogi = new Pogacsa(15, " PizzasPogi", 15, 2, 21);
+        
+        
         Torta torta = new Torta(15, "Dobos Torta", 21, 5, 15);
+        
+        
+        pogi.selfLife();
+        
 
           Product[] outProducts = new Product[2];
          outProducts[0] = pogi;
