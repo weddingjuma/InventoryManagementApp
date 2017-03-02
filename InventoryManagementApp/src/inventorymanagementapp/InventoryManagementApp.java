@@ -5,6 +5,8 @@
  */
 package inventorymanagementapp;
 
+import java.util.Scanner;
+
 /**
  *
  * @author joci
@@ -47,7 +49,16 @@ public class InventoryManagementApp {
 
         inventory.ellenoriz();
         
-        inventory.refillInventory();
+        
+        System.out.println("Ha beirja hogy    'Ujratolt' a raktar ujra toltodik " );
+        Scanner sc = new Scanner(System.in);
+        String parancs = sc.nextLine();
+        if (parancs.endsWith("Ujratolt")) {
+         inventory.refillInventory();   
+        }
+        
+        
+        
         
         System.out.println(inventory.toString());
     }
