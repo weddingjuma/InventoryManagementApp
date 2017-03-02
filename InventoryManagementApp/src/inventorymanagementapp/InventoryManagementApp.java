@@ -32,7 +32,7 @@ public class InventoryManagementApp {
         Torta torta = new Torta(15, "Dobos Torta", 21, 5, 15);
         
         
-        pogi.selfLife();
+  
         
 
           Product[] outProducts = new Product[2];
@@ -50,17 +50,14 @@ public class InventoryManagementApp {
         inventory.ellenoriz();
         
         
-        System.out.println("Ha beirja hogy    'Ujratolt' a raktar ujra toltodik " );
-        Scanner sc = new Scanner(System.in);
-        String parancs = sc.nextLine();
-        if (parancs.endsWith("Ujratolt")) {
+    
          inventory.refillInventory();   
-        }
         
         
         
         
-        System.out.println(inventory.toString());
+        
+       // System.out.println(inventory.toString());
     }
 
 }

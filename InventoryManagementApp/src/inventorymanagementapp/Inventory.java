@@ -5,6 +5,8 @@
  */
 package inventorymanagementapp;
 
+import java.util.Scanner;
+
 /**
  *
  * @author joci
@@ -29,15 +31,27 @@ public class Inventory {
     }
 
     public void refillInventory() {
-
-        liszt = 150;
+        
+        System.out.println("Ujra akraja tolteni a raktarat ? ( igen vagy nem ? )" );
+        
+        Scanner sc = new Scanner(System.in);
+        String parancs = sc.nextLine();
+        
+        parancs.toLowerCase();
+        if (parancs.equals("igen")) {
+            liszt = 150;
         lekvar = 200;
         tej = 150;
         tojas = 500;
         vaj = 650;
         csoki = 120;
         tejszinhabraktaron = 150;
-        pizzakremARaktarban = 70;
+        pizzakremARaktarban = 70;  
+        }else{
+            System.out.println(this);
+        }
+
+       
 
     }
 
